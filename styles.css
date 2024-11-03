@@ -68,13 +68,13 @@
     background-color:lightgreen;
 }
 
-#cancelBtn:hover{
-    background-color:lightcoral;
-}
-
 #addBookBtn:active{
     background-color:green;
     transform: translateY(1px);
+}
+
+#cancelBtn:hover{
+    background-color:lightcoral;
 }
 
 #cancelBtn:active{
@@ -94,6 +94,15 @@
     padding: 2px 5px;
     background-color:lightgrey;
     border-color:grey;
+}
+
+.deleteBtn:hover{
+    background-color:lightcoral;
+}
+
+.deleteBtn:active{
+    background-color:red;
+    transform: translateY(1px);
 }
 
 .bookTitle{

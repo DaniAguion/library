@@ -52,11 +52,6 @@ cancelBtn.addEventListener("click", function() {
 })
 
 
-// Event to read deleteBtn PENDING
-for (let i of allDeleteBtn){
-
-}
-
 
 
 // Function to construct Book objects
@@ -85,29 +80,37 @@ function displayBook(book, index){
     const title = document.createElement("p");
     const author = document.createElement("p");
     const pages = document.createElement("p");
-    const read = document.createElement("p");
     const deleteBtn = document.createElement("button");
+    const readBtn = document.createElement("button");  
 
     deleteBtn.textContent = "X";
     title.textContent = book.title;
     author.textContent = book.author;
     pages.textContent = book.pages + " pages";
-    read.textContent = book.read;
+    readBtn.textContent = book.read;
 
     cardElement.classList.add("card");
     title.classList.add("bookTitle");
     deleteBtn.classList.add("deleteBtn");
+    readBtn.classList.add("readBtn");
 
     cardElement.appendChild(deleteBtn);
     cardElement.appendChild(title);
     cardElement.appendChild(author);
     cardElement.appendChild(pages);
-    cardElement.appendChild(read);
+    cardElement.appendChild(readBtn);
     contElement.appendChild(cardElement);
 
     //  Create an event for the delete button
     deleteBtn.addEventListener("click",function() {
         myLibrary.splice(index, 1);
+        displayLibrary();
+    });
+
+
+    //  Create an event for the toggle read status
+    readBtn.addEventListener("click",function() {
+        toggleRead(book);
         displayLibrary();
     });
 }
@@ -120,5 +123,15 @@ function displayLibrary(){
 
     for (let i = 0; i < myLibrary.length; i++){
         displayBook(myLibrary[i], i);
+    }
+}
+
+
+function toggleRead(book){
+    if (book.read === "Read"){
+        book.read = "Not Read"
+    }
+    else{
+        book.read = "Read"
     }
 }
