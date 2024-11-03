@@ -83,11 +83,17 @@
 }
 
 .card{
-    padding: 2px 16px;
+    padding: 10px 16px;
     margin: 0 10px;
     background-color: lightgrey;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
     text-align: center;
+}
+
+.deleteBtn{
+    padding: 2px 5px;
+    background-color:lightgrey;
+    border-color:grey;
 }
 
 .bookTitle{
