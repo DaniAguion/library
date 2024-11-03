@@ -1,11 +1,96 @@
-#book_container{
+
+#controls{
+    display: flex;
+    margin:5em;
+    align-items: center;
+    justify-content: center;
+}
+
+#bookContainer{
     display: flex;
     flex-direction:row;
 }
 
+#newBookBtn{
+    font-size: 1em;
+    font-weight:bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: lightgrey;
+    transition: background-color 0.3s ease;
+}
+
+#newBookBtn:active{
+    background-color:grey;
+    transform: translateY(1px);
+}
+
+#newBookDlg{
+    padding: 20px;
+}
+
+#newBookDlg > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#newBookDlg > input{
+    margin-top: 8px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#readSelection{
+    display: flex;
+    flex-direction:row;
+    margin: 10px;
+}
+
+#controlDlg{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+#controlDlg > button{
+    font-weight:bold;
+    border-radius: 2px;
+    background-color: lightgrey;
+    transition: background-color 0.3s ease;
+    padding: 2px 10px;
+    margin: 0 8px;
+}
+
+#addBookBtn:hover{
+    background-color:lightgreen;
+}
+
+#cancelBtn:hover{
+    background-color:lightcoral;
+}
+
+#addBookBtn:active{
+    background-color:green;
+    transform: translateY(1px);
+}
+
+#cancelBtn:active{
+    background-color:red;
+    transform: translateY(1px);
+}
+
 .card{
     padding: 2px 16px;
-    margin: 0 20px;
+    margin: 0 10px;
     background-color: lightgrey;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.bookTitle{
+    font-size: 1.2em;
+    font-weight:bold;
 }
