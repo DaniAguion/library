@@ -1,2 +1,2 @@
 # library
-Library project from Odin Project
+Project: Library from Odin Project
